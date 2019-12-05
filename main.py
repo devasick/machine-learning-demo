@@ -3,12 +3,9 @@ import pandas as pd
 import numpy as np
 import json,urllib.request
 from sklearn.model_selection import train_test_split
-from sklearn.feature_selection import SelectFromModel
-from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
-from sklearn import metrics
-import seaborn as sns
-import matplotlib.pyplot as plt
+from flask_caching import Cache 
+
 
 
 
@@ -20,7 +17,8 @@ def create_app():
          
 
         ############
-        data = urllib.request.urlopen("http://0.0.0.0:7410/data").read() 
+        
+        data = urllib.request.urlopen("http://0.0.0.0:7411/data").read() 
 
         output = json.loads(data) #json data fetching from localhost
 
@@ -72,4 +70,6 @@ def create_app():
 if __name__ == "__main__":
     app = create_app()
     # serve the application on port 7410
-    app.run(debug=True,host='0.0.0.0', port=7410)
+    cache = Cache(app, config={'CACHE_TYPE': 'simple'}) ##cache 
+    
+    app.run(debug=True,host='0.0.0.0', port=7411)
