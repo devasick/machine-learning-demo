@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div id={{ chartID|safe }} class="chart" style="height: 500px; width: 100%"></div>
+</div>
+
+<!-- <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div> -->
+
+<script>
+        var chart_id = {{ chartID|safe }}
+        var series = {{ series|safe }}
+        var title = {{ title|safe }}
+        var xAxis = {{ xAxis|safe }}
+        var yAxis = {{ yAxis|safe }}
+        var chart = {{ chart|safe }}
+
+        $(document).ready(function() {
+	    $(chart_id).highcharts({
+		chart: chart,
+		title: title,
+		xAxis: xAxis,
+		yAxis: yAxis,
+        series: series,
+        plotOptions: {
+        column: {
+            borderRadius: 5
+        }
+        },
+	         });
+        });
+    </script>
+
+{% endblock %}

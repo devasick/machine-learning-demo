@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  background:#eee;  
+}
+/* Header  start here */
+nav{
+  margin: 0;
+  background: #EB3349;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 80px;
+  line-height: 80px;
+  padding: 0 10px 0 10px;
+}
+.brand-logo img{padding: 5px;} 
+#nav-mobile a{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+.jumbotron h1{font-size: 3rem;} 
+.jumbotron h2{font-size: 2rem;} 
+.jumbotron .container-fluid{padding: 25px;}
+.btn-large{
+  background: #EB3349;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.jumbotron { background-size: cover;background-repeat: no-repeat; padding: 10px;}
+.desc{
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+}
+/* bar chart */
+
+.highcharts-color-0 {
+	fill: #EB3349;
+}
+.highcharts-axis.highcharts-color-0 .highcharts-axis-line {
+  stroke: #000;
+  fill: #000; 
+}
+.highcharts-axis.highcharts-color-0 text {
+	fill: #000;
+}
+
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 4px;
+}
+
+
+/* footer */
+footer{
+  background: #000 !important;  
+}
+.footer-copyright{
+  background: #191919 !important;  
+}
